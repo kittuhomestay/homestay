@@ -1,2 +1,2 @@
-# homestay
+# KITTU HOMESTAY
 Kittu HomeStay
