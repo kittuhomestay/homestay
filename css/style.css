@@ -1,33 +1,15 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  color: #333;
-}
-
-header {
-  background: #4CAF50;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-nav a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-}
-
-main {
-  padding: 20px;
-}
-
-footer {
-  background: #eee;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+body, h1,h2,h3,p,ul{margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#333;line-height:1.6}
+.hero{height:70vh;background-size:cover;position:relative;color:#fff;text-align:center;display:flex;align-items:center;justify-content:center}
+.hero .overlay{background:rgba(0,0,0,0.5);padding:2em}
+.hero .btn{background:#4CAF50;color:#fff;padding:1em 2em;text-decoration:none;border-radius:5px}
+.main-nav{background:#fff;text-align:center;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+.main-nav a{margin:0 1em;color:#333;text-decoration:none;padding:1em;display:inline-block}
+section{padding:3em 1em;text-align:center}
+.room-grid{display:flex;gap:1em;justify-content:center;flex-wrap:wrap}
+.room{border:1px solid #ddd;padding:1.5em;border-radius:8px;width:200px}
+.amenity-list{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:1em}
+.amenity-list li{background:#eee;padding:.5em 1em;border-radius:4px}
+blockquote{font-style:italic;color:#555;margin:1em auto;width:80%;max-width:600px}
+.map{margin-top:1em}
+footer{background:#f4f4f4;padding:2em;text-align:center}
