@@ -1,33 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kittu Homestay</title>
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to Kittu Homestay</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="hero" style="background-image:url('images/hero.jpg')">
+    <div class="overlay">
+      <h1>Kittu Homestay</h1>
+      <p>Your peaceful getaway in Chandragiri</p>
+      <a href="mailto:info@kittuhomestay.com" class="btn">Book Now</a>
+    </div>
   </header>
-  <main>
-    <section>
-      <h2>Your Home Away From Home</h2>
-      <p>Experience peaceful, comfortable stays at our beautiful homestay in Chandragiri.</p>
-    </section>
-    <section>
-      <h2>Contact Now</h2>
-      <p>Email: info@kittuhomestay.com</p>
-      <p>Phone: +9866310555</p>
-      <p>Location: 1-832, Mallaiah Palli Road, near Bluland Water Park, Chandragiri, India</p>
-    </section>
-  </main>
+
+  <nav class="main-nav">
+    <a href="#about">About</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Family-run homestay offering comfort & kindness near Bluland Water Park.</p>
+  </section>
+
+  <section id="rooms">
+    <h2>Rooms & Rates</h2>
+    <div class="room-grid">
+      <div class="room">
+        <h3>Standard Double</h3>
+        <p>From ₹1,500/night</p>
+      </div>
+      <div class="room">
+        <h3>Family Suite</h3>
+        <p>From ₹3,000/night</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="amenities">
+    <h2>Amenities</h2>
+    <ul class="amenity-list">
+      <li>Free Wi-Fi</li>
+      <li>24-hour hot water</li>
+      <li>Housekeeping</li>
+      <li>Travel support</li>
+    </ul>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Guests Say</h2>
+    <blockquote>“Clean rooms & helpful host!” — Arti</blockquote>
+    <blockquote>“Great value near the railway.” — Sandeep</blockquote>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> +91‑XXXXXXXXXX</p>
+    <p><strong>Email:</strong> info@kittuhomestay.com</p>
+    <p><strong>Address:</strong> 1‑832, Mallaiah Palli Road, Chandragiri</p>
+    <div class="map">
+      <!-- Embed Google Map iframe -->
+      <iframe src="YOUR_GOOGLE_MAPS_EMBED_URL" width="100%" height="250"></iframe>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 Kittu Homestay</p>
   </footer>
