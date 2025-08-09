@@ -163,15 +163,21 @@
         const modalImg = document.getElementById('modal-image');
         modal.style.display = 'block';
         modalImg.src = this.src;
-    document.body.style.overflow = 'hidden'; // Prevent scroll behind
-  });
+        document.body.style.overflow = 'hidden'; // Prevent scroll behind
+      });
     });
 
-// Close modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+
+    // Close modal
     function closeModal() {
       document.getElementById('image-modal').style.display = 'none';
-  document.body.style.overflow = ''; // Restore scroll
-}
+      document.body.style.overflow = ''; // Restore scroll
+    }
 
 </script>
 </body>
