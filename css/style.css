@@ -1,15 +1,240 @@
-body, h1,h2,h3,p,ul{margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#333;line-height:1.6}
-.hero{height:70vh;background-size:cover;position:relative;color:#fff;text-align:center;display:flex;align-items:center;justify-content:center}
-.hero .overlay{background:rgba(0,0,0,0.5);padding:2em}
-.hero .btn{background:#4CAF50;color:#fff;padding:1em 2em;text-decoration:none;border-radius:5px}
-.main-nav{background:#fff;text-align:center;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
-.main-nav a{margin:0 1em;color:#333;text-decoration:none;padding:1em;display:inline-block}
-section{padding:3em 1em;text-align:center}
-.room-grid{display:flex;gap:1em;justify-content:center;flex-wrap:wrap}
-.room{border:1px solid #ddd;padding:1.5em;border-radius:8px;width:200px}
-.amenity-list{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:1em}
-.amenity-list li{background:#eee;padding:.5em 1em;border-radius:4px}
-blockquote{font-style:italic;color:#555;margin:1em auto;width:80%;max-width:600px}
-.map{margin-top:1em}
-footer{background:#f4f4f4;padding:2em;text-align:center}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 6px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.hero {
+  position: relative;
+  background-image: url('../images/building.JPG');
+  background-size: cover;
+  background-position: center;
+  height: 92vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+  padding: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.about, .gallery, .contact {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.about p {
+  text-align: justify;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Modal Viewer */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.image-modal .modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  animation: zoom 0.3s;
+  border-radius: 8px;
+}
+
+.image-modal .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.7);}
+  to {transform: scale(1);}
+}
+
+.rooms, .amenities {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.room-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.room-card {
+  flex: 1;
+  min-width: 250px;
+  background: #f7f7f7;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.amenities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.5rem 1rem;
+  list-style: none;
+  padding-left: 1rem;
+}
+
+section {
+  scroll-margin-top: 70px; /* Adjust this based on navbar height */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 550px;
+  border: 0;
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: #2d3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
